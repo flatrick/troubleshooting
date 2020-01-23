@@ -20,10 +20,10 @@ I will try to create a fairly generic overview of the most common aspects of an 
 | ----------  |:-------------:| -----:|
 | App         | Stack-traces, trace-profiles  | Process Monitor - Process Explorer - Task Manager - PerfView - VMMap  |
 | CPU         | Performance-capability, resource-usage, (app)context  | Process Monitor - Process Explorer - PerfMon  |
-| RAM         | Availability, resource-usage  | Process Explorer - Process Monitor - PerfMon  |
+| RAM         | Availability, resource-usage  | Process Monitor - Process Explorer - PerfMon  |
 | Registry    | Create, Read, Update, Delete and missing posts  | Process Monitor - RegScanner - RegEdit  |
 | Logs        | Logs from both the OS and applications  | eventvwr.msc - snaketail-net - glogg/klogg - Notepad++  |
-| Storage     | Utilization, read/write responsetime and bandwidth  | PerfMon - ATTO Disk Benchmark - Process Monitor - IOMeter  |
-| Shares      | Utilization, read/write responsetime and bandwidth  | fsmgmt.msc - PerfMon - ATTO Disk Benchmark - Process Monitor - IOMeter  |
-| Network     | Reachable, Utilization, bandwidth, response time, successful delivery  | Wireshark, SmartSniff, Process Monitor, Process Explorer |
+| Storage     | Utilization, read/write responsetime and bandwidth  | Process Monitor - PerfMon - ATTO Disk Benchmark - IOMeter  |
+| Shares      | Utilization, read/write responsetime and bandwidth  |  Process Monitor - fsmgmt.msc - PerfMon - ATTO Disk Benchmark - IOMeter  |
+| Network     | Reachable, Utilization, bandwidth, response time, successful delivery  | Process Monitor - Process Explorer - Wireshark - SmartSniff  |
 | Webservices | Reachable, responses, response time  | Charles Proxy, Fiddler, Wireshark    |
