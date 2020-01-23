@@ -18,12 +18,13 @@ I will try to create a fairly generic overview of the most common aspects of an 
 
 | Aspect      | Details       | Tools |
 | ----------  |:-------------:| -----:|
-| App         | Stack-traces, trace-profiles  | Process Monitor - Process Explorer - Task Manager - PerfView - VMMap  |
+| Application | Stack-traces, trace-profiles, loaded DLLs, files locked/processed, (app)context | Process Monitor - Process Explorer - PerfView - VMMap  |
 | CPU         | Performance-capability, resource-usage, (app)context  | Process Monitor - Process Explorer - PerfMon  |
-| RAM         | Availability, resource-usage  | Process Monitor - Process Explorer - PerfMon  |
+| RAM         | Free memory, memory-usage  | Process Monitor - Process Explorer - PerfMon - VMMap  |
 | Registry    | Create, Read, Update, Delete and missing posts  | Process Monitor - RegScanner - RegEdit  |
 | Logs        | Logs from both the OS and applications  | eventvwr.msc - snaketail-net - glogg/klogg - Notepad++  |
 | Storage     | Utilization, read/write responsetime and bandwidth  | Process Monitor - PerfMon - ATTO Disk Benchmark - IOMeter  |
 | Shares      | Utilization, read/write responsetime and bandwidth  |  Process Monitor - fsmgmt.msc - PerfMon - ATTO Disk Benchmark - IOMeter  |
 | Network     | Reachable, Utilization, bandwidth, response time, successful delivery  | Process Monitor - Process Explorer - Wireshark - SmartSniff  |
 | Webservices | Reachable, responses, response time  | Charles Proxy, Fiddler, Wireshark    |
+| Database (MSSQL) | Blocking queries, Query execution time, Index issues  | SSMS - SQL Server Profiler - sp_Blitz - PerfMon  |
