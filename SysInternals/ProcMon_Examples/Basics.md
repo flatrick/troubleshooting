@@ -1,11 +1,20 @@
 # Introduction
 
-This will describe how to setup filters, what to think about when choosing filters.
-I will also describe how to work with highlighting and bookmarks.
+This will describe the basics of how to work with Process Monitor:
 
-To reach the main menus for Filtering and Highlighting, click on the top-menu Filter.
+* How to setup Filters
+  * What to consider when choosing Filters
+* Highlighting, and why you'd want to
+* Bookmarks and their usefulness
 
-![Top-menu](pics/Filter.png)
+# Where to find everything 
+
+![Top-menui - File](pics/File.png)
+![Top-menui - Edit](pics/Edit.png)
+![Top-menui - Event](pics/Event.png)
+![Top-menui - Filter](pics/Filter.png)
+![Top-menui - Tools](pics/Tools.png)
+![Top-menui - Options](pics/Options.png)
 
 # Filtering
 
