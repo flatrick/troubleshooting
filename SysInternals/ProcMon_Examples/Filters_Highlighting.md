@@ -13,4 +13,6 @@ I will also describe how to work with highlighting and bookmarks.
 
 # Highlighting
 
+![Highlighting](pics/Filter-Highlighting.png)
+
 # Bookmarks
