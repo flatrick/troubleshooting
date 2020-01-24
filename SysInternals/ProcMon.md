@@ -5,7 +5,7 @@
 * It can help you find bottlenecks in performance in more ways than one
   * I/O-performance in terms of response time per every single I/O-request (both local storage and network)
   * I/O-performance by showing amount of bytes per operation _(combined with the field **Duration** we can calculate Bytes Per Second)_
-  * CPU-performance by measuring the amount of time spent between two operations
+  * CPU-performance by measuring the amount of time spent between two operations and by capturing total amount of CPU-time used by the application
   * Total amount of CPU time spent in either **User Time** or **Kernel Time**
   * **Network response time/bandwidth** by looking at **duration time** for a operation of X amount of bytes
   * Stack traces for every captured event (so you can see which context an application has spent the majority of it's time with)
