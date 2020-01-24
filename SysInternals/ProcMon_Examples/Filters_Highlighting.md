@@ -9,7 +9,9 @@ To reach the main menus for Filtering and Highlighting, click on the top-menu Fi
 
 # Filtering
 
-![Choose of field](pics/Filter-Filter-Field.png)
+![Choose field to match on](pics/Filter-Filter-Field.png)
+![Condition](pics/Filter-Filter-Condition.png)
+![Include or Exclude matches](pics/Filter-Filter-IncludeExclude.png)
 
 ## Prepare filters before capture
 
