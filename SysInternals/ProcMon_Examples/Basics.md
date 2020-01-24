@@ -22,3 +22,5 @@ To reach the main menus for Filtering and Highlighting, click on the top-menu Fi
 ![Highlighting](pics/Filter-Highlighting.png)
 
 # Bookmarks
+
+![Event](pics/Event.png)
