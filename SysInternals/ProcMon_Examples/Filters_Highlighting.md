@@ -3,6 +3,10 @@
 This will describe how to setup filters, what to think about when choosing filters.
 I will also describe how to work with highlighting and bookmarks.
 
+To reach the main menus for Filtering and Highlighting, click on the top-menu Filter.
+
+![Top-menu](pics/Filter.png)
+
 # Filtering
 
 ![Choose of field](pics/Filter-Filter-Field.png)
