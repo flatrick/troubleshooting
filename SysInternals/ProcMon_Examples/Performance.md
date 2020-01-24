@@ -1,11 +1,13 @@
 # Introduction
 
-# Storage
-
-## File shares
-
 # RAM 
+
+# Application context
 
 # Network
 
-# Application context
+# Storage
+
+## Locally attached storage
+
+## Network attached storage
