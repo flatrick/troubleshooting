@@ -5,7 +5,7 @@ I will also describe how to work with highlighting and bookmarks.
 
 # Filtering
 
-![Choose of field][pics/Filter-Filter-Field.png]
+![Choose of field](pics/Filter-Filter-Field.png)
 
 ## Prepare filters before capture
 
