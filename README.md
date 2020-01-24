@@ -2,7 +2,7 @@
 
 The main goal of this repository is to provide a source for guides on how to perform troubleshooting, first and foremost for those of you who are trying to figure out what's wrong with a piece of software you don't have the source-code for.  
 
-Some of the things I aim to explain will however be useful tools for developers as well, sometimes a developers idea of what their program is doing might be far from the truth, most oftenly because their assumptions on how the other objects the application works with behave.
+Some of the things I aim to explain will however be useful tools for developers as well, sometimes a developers idea of what their program is doing might be far from the truth, most oftenly because their assumptions  on how the other objects the application works with behave are incorrect.
 
 # Scope
 
