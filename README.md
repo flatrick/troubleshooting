@@ -7,7 +7,7 @@ Some of the things I aim to explain will however be useful tools for developers 
 # Scope
 
 Even though I feel most at home in a UNIX-environment, my professional work life has primarily had me work with Windows-environments for the past 10 years.  
-Therefor this guide will try to be a helping hand for all of you Windows-technicians out there!  
+Therefore this guide will try to be a helping hand for all of you Windows-technicians out there!  
 I've primarily worked with troubleshooting .Net, Visual FoxPro and Visual Basic.Net applications, but anything that runs on Windows will be covered here, some in more detail than others based on my own experiences.  
   
 If **you** have some tips, guides or ideas for me to dive deeper into, **please**, leave a Issue and let's see what we can create together.
