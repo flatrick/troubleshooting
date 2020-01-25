@@ -52,7 +52,7 @@ I will try to create a fairly generic overview of the most common aspects of an 
   * RegScanner
   * BlueScreenView
   * WinCrashReport
-  * RegFromApp _(this tool can partially be replace by SysInternal's Process Monitor)_
+  * RegFromApp _(this tool can partially be replaced by SysInternal's Process Monitor)_
   * ProcessActivityView _(this tool can entirely be replaced by SysInternal's Process Monitor)_
   * HeapMemView
   * DeviceIOView
