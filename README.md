@@ -12,7 +12,7 @@ I've primarily worked with troubleshooting .Net, Visual FoxPro and Visual Basic.
   
 If **you** have some tips, guides or ideas for me to dive deeper into, **please**, leave a Issue and let's see what we can create together.
 
-# Aspects and the related tools
+# Aspects to troubleshoot
 
 I will try to create a fairly generic overview of the most common aspects of an application you might need to troubleshoot and what tools you'd use to accomplish it with.
 
@@ -25,6 +25,35 @@ I will try to create a fairly generic overview of the most common aspects of an 
 | Logs        | Logs from both the OS and applications  | eventvwr.msc - snaketail-net - glogg/klogg - Notepad++  |
 | Storage     | Utilization, read/write responsetime and bandwidth  | Process Monitor - PerfMon - ATTO Disk Benchmark - IOMeter  |
 | Shares      | Utilization, read/write responsetime and bandwidth  |  Process Monitor - fsmgmt.msc - PerfMon - ATTO Disk Benchmark - IOMeter  |
-| Network     | Reachable, Utilization, bandwidth, response time, successful delivery  | Process Monitor - Process Explorer - Wireshark - SmartSniff  |
+| Network     | Reachable, Utilization, bandwidth, response time, successful delivery  | Process Monitor - Process Explorer - Wireshark - SmartSniff - ping - tracert - PortQry - netstat |
 | Webservices | Reachable, responses, response time  | Charles Proxy, Fiddler, Wireshark    |
 | Database (MSSQL) | Blocking queries, Query execution time, Index issues  | SSMS - SQL Server Profiler - sp_Blitz - PerfMon  |
+
+# The tools
+
+* Microsoft
+  * PerfMon.msc
+  * Eventvwr.msc
+  * Fsmgmt.msc
+  * Task Manager
+  * RegEdit
+  * ping
+  * tracert
+  * PortQry
+  * netstat
+  * PerfView
+  * SSMS (SQL Server Management Studio)
+  * SQL Server Profiler
+* Windows SysInternals
+  * Process Monitor
+  * Process Explorer
+  * VMMap
+* NirSoft
+  * RegScanner
+  * BlueScreenView
+  * WinCrashReport
+  * RegFromApp _(this tool can partially be replace by SysInternal's Process Monitor)_
+  * ProcessActivityView _(this tool can entirely be replaced by SysInternal's Process Monitor)_
+  * HeapMemView
+  * DeviceIOView
+  * SmartSniff
