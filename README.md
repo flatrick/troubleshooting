@@ -107,6 +107,10 @@ But here are some of the tools you'll be using to troubleshoot anything regardin
 
 #### Network Storage
 
+## External services
+
+### Depedencies
+
 ### Database
 
 #### Microsoft SQL Server
