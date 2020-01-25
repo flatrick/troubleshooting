@@ -109,7 +109,7 @@ But here are some of the tools you'll be using to troubleshoot anything regardin
 
 ## External services
 
-### Depedencies
+### Dependencies
 
 ### Database
 
