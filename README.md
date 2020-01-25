@@ -139,7 +139,7 @@ But we also need to know **how** to see what's going on and that last part I can
 | Webservices | Reachable, responses, response time  | Charles Proxy, Fiddler, Wireshark    |
 | Database (MSSQL) | Blocking queries, Query execution time, Index issues  | SSMS - SQL Server Profiler - sp_Blitz - PerfMon  |
 
-# The tools
+# The tools in one long list
 
 * Microsoft
   * PerfMon.msc
