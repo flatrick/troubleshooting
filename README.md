@@ -121,8 +121,8 @@ REST-API:s, SOAP-API:s, GrapQL-API:s and countless alternatives to come.
 For applications to handle the vast amount of users, plenty choose to split into multiple services to be able to split the load over multiple computers.
 This creates the need for a way to communicate, and some of the ones that are heavily used today are known as REST, SOAP and GraphQL.  
 
-For a support-technician, it can be vital to know **what** they are and **why** they're being used, even more so, we need to know **how** they're being used so we know **when** they're not doing what they're expected to.
-But we also need to know **how** to see what's going on and that part I can help you with, the others is up to you to investigate.
+For a support-technician, it can be vital to know **what** they are and **why** they're being used, even more so, we need to know **how** they're being used so we know **when** they're not doing what they're expected to.  
+But we also need to know **how** to see what's going on and that last part I can help you with, the others is up to you to investigate since the application can use one or more of them at the same time.
 
 # MOVE ME INTO CATEGORIES ABOVE
 
