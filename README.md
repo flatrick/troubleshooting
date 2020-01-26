@@ -131,21 +131,6 @@ This creates the need for a way to communicate, and some of the ones that are he
 For a support-technician, it can be vital to know **what** they are and **why** they're being used, even more so, we need to know **how** they're being used so we know **when** they're not doing what they're expected to.  
 But we also need to know **how** to see what's going on and that last part I can help you with, the others is up to you to investigate since the application can use one or more of them at the same time.
 
-# MOVE ME INTO CATEGORIES ABOVE
-
-| Aspect      | Details       | Tools |
-| ----------  |:-------------:| -----:|
-| Application | Stack-traces, trace-profiles, loaded DLLs, files locked/processed, (app)context | Process Monitor - Process Explorer - PerfView - VMMap  |
-| CPU         | Performance-capability, resource-usage, (app)context  | Process Monitor - Process Explorer - PerfMon  |
-| RAM         | Free memory, memory-usage  | Process Monitor - Process Explorer - PerfMon - VMMap  |
-| Registry    | Create, Read, Update, Delete and missing posts  | Process Monitor - RegScanner - RegEdit  |
-| Logs        | Logs from both the OS and applications  | eventvwr.msc - snaketail-net - glogg/klogg - Notepad++  |
-| Storage     | Utilization, read/write responsetime and bandwidth  | Process Monitor - PerfMon - ATTO Disk Benchmark - IOMeter  |
-| Shares      | Utilization, read/write responsetime and bandwidth  |  Process Monitor - fsmgmt.msc - PerfMon - ATTO Disk Benchmark - IOMeter  |
-| Network     | Reachable, Utilization, bandwidth, response time, successful delivery  | Process Monitor - Process Explorer - Wireshark - SmartSniff - ping - tracert - PortQry - netstat |
-| Webservices | Reachable, responses, response time  | Charles Proxy, Fiddler, Wireshark    |
-| Database (MSSQL) | Blocking queries, Query execution time, Index issues  | SSMS - SQL Server Profiler - sp_Blitz - PerfMon  |
-
 # The tools in one long list
 
 * Microsoft
