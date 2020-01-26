@@ -60,8 +60,11 @@ If the logs or memory-dumps aren't really giving you any good clues as to what h
 ### Tools for when the logs aren't enough
 
 I will start by saying this: I'm not exaggerating when I say that the vast majority of issues I've troubleshooted, I've done using this single tool.  
-Performance, misbehaving or full application crashes can all be troubleshooted using Windows SysInternals Process Monitor. Sounds too good to be true?  
+Performance, misbehaving or full application crashes can all be troubleshooted using Windows SysInternals Process Monitor.  
+Sounds too good to be true?  
 Well, then you're in for a wild ride as you start going through the guides I'll share here and start to see for yourself just how much can be analyzed and identified using this tool.  
+
+The tools I'd recommend using to get a better understanding of what a application is up to are primarily these:
 
 * Windows SysInternals - Process Monitor
 * Windows SysInternals - Process Explorer
@@ -73,6 +76,10 @@ Well, then you're in for a wild ride as you start going through the guides I'll 
 * Eventvwr.msc
 
 ## Operating System
+
+Sometimes, a application will cause a error so severe that the entire O/S crashes. In these situations, depending on how Windows has been configured, you might need to change the settings in Windows as to how it handles Blue Screens.  
+I generally recommend turning off the automatic reboot so you can see the error message and reboot yourself.  
+NirSoft provides a handy tool, BlueScreenView, for looking at the last (and previous) blue screen memory dumps that has been created and it can help you try to figure out what caused the crash of the O/S.
 
 * BlueScreenView _(this is if the entire O/S crashes while using the application in question)_
 
@@ -134,7 +141,7 @@ But we also need to know **how** to see what's going on and that last part I can
 | Registry    | Create, Read, Update, Delete and missing posts  | Process Monitor - RegScanner - RegEdit  |
 | Logs        | Logs from both the OS and applications  | eventvwr.msc - snaketail-net - glogg/klogg - Notepad++  |
 | Storage     | Utilization, read/write responsetime and bandwidth  | Process Monitor - PerfMon - ATTO Disk Benchmark - IOMeter  |
-| Shares      | Utilization, read/write responsetime and bandwidth  |  Process Monitor Keep track of how well we reach our goals so we can adjust our plans and/or goals (increase/decrease the expected weight lost per X amount of days OR make further adjustments to what we eat)- fsmgmt.msc - PerfMon - ATTO Disk Benchmark - IOMeter  |
+| Shares      | Utilization, read/write responsetime and bandwidth  |  Process Monitor - fsmgmt.msc - PerfMon - ATTO Disk Benchmark - IOMeter  |
 | Network     | Reachable, Utilization, bandwidth, response time, successful delivery  | Process Monitor - Process Explorer - Wireshark - SmartSniff - ping - tracert - PortQry - netstat |
 | Webservices | Reachable, responses, response time  | Charles Proxy, Fiddler, Wireshark    |
 | Database (MSSQL) | Blocking queries, Query execution time, Index issues  | SSMS - SQL Server Profiler - sp_Blitz - PerfMon  |
@@ -168,3 +175,18 @@ But we also need to know **how** to see what's going on and that last part I can
   * HeapMemView
   * DeviceIOView
   * SmartSniff
+* Brent Ozar
+  * sp_Blitz
+  * sp_BlitzFirst
+  * sp_BlitzWho
+  * sp_BlitzCache
+  * sp_BlitzIndex
+  * sp_BlitzQueryStore
+* Fiddler
+* Charles Proxy
+* ATTO Disk Benchmark
+* snaketail-net
+* glogg / klogg
+* Notepad++
+* IOMeter
+* Wireshark
