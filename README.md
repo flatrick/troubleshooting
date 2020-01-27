@@ -87,6 +87,7 @@ The tools I'd recommend using to get a better understanding of what a applicatio
 * NirSoft - DeviceIOView
 * PerfMon.msc
 * Eventvwr.msc
+* PerfView
 
 ## Operating System
 
