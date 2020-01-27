@@ -147,7 +147,7 @@ But we also need to know **how** to see what's going on and that last part I can
   * WinDbg
   * SSMS (SQL Server Management Studio)
   * SQL Server Profiler
-* Windows SysInternals
+* [Windows SysInternals](SysInternals/ReadMe.md)
   * Process Monitor
   * Process Explorer
   * VMMap
