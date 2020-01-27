@@ -36,6 +36,19 @@ Using a tool such as **Snagit** for screen-recording will be useful if you need 
 **Remember this: any detail given by the end-user must be considered unreliable until you can reproduce the error yourself**.  
 If/when you can reproduce the error on a separate computer of your own, you're most certainly working with something where it might be worth involving the developers of the software itself, if possible. But there are still things we can do before attempting to get a developer to assist us!
 
+Here is a list of questions I try to find the answer for when I have an error I don't know the cause for:
+1. What application is being used? Version, integrations used and other relevant details
+1. Where in the application is the user working?
+1. What has the user done up until the error occurred?
+1. What is the user attempting to do?
+1. What result/error is the user getting?
+1. What result was the user supposed to get?
+1. At what time did this occur?
+1. Can the user reproduce the error? 
+    1. Can the user reproduce the error on every/multiple logins?
+1. Can you (the troubleshooter) reproduce the error in the same system?
+    1. Can you (the troubleshooter) reproduce the error in a separate system?
+
 ### Misbehaving application
 
 If you're not experiencing application crashes, hopefully the application will have stored information about something going wrong in one of its own logs so it's time to start going through these.
