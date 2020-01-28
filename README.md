@@ -94,9 +94,12 @@ Here is a list of tools to get a better understanding of what a application is u
 
 Sometimes, a application will cause a error so severe that the entire O/S crashes. In these situations, depending on how Windows has been configured, you might need to change the settings in Windows as to how it handles Blue Screens.  
 I generally recommend turning off the automatic reboot so you can see the error message and reboot yourself.  
-NirSoft provides a handy tool, BlueScreenView, for looking at the last (and previous) blue screen memory dumps that has been created and it can help you try to figure out what caused the crash of the O/S.
+NirSoft provides a handy tool, BlueScreenView, for looking at the last (and previous) blue screen memory dumps that has been created and it can help you try to figure out what caused the crash of the O/S.  
+
+If you need to know what happens during the entire boot-process, Process Monitor can help you out by creating a trace of all events during the boot-up.
 
 * BlueScreenView
+* Windows SysInternals - Process Monitor
 
 ### Registry
 
