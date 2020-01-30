@@ -130,12 +130,12 @@ But here are some of the tools you'll be using to troubleshoot anything regardin
 
 #### Local Storage
 
-Local storage in Windows, or more specifically, unit drives that the O/S identifies as local, Windows will allow you to cached read/writes to.  
-While using **Process Monitor** (using **Enable Advanced Output**, which you should) you'll likely see FASTIO_* operations that will succeed and fail every now and then when it comes to local storage.  
-Fast I/O read requests will cause the System-process to convert any read-request of less than 128KB into specifically 128KB; this is quite important to remember when you're trying to figure out performance issues with I/O-access that aren't on what Windows considers local storage.  
+Local storage in Windows, or more specifically, unit drives that the O/S identifies as local, Windows will allow you to do cached read/writes to.  
+While using **Process Monitor** (using **Enable Advanced Output**, which you should) you'll likely see **FASTIO_*** operations that will succeed and fail every now and then when it comes to local storage.  
+**Fast I/O** read requests will cause the **System-process** to convert any read-request of **less than 128KB into specifically 128KB;** this is quite important to remember when you're trying to figure out performance issues with I/O-access that aren't on what Windows considers local storage.  
 
-As an example, around 2014, I was trying to figure out why database-reads were so incredibly slow when the dBase5-based database existed on a shared folder.  
-I happened to see that **System process** was doing larger reads than the application itself was asking for when I was running the same test but with all files on my local drive.  
+As an example, around 2014, I was trying to figure out why database-reads were so incredibly slow when the **dBase5-based database** existed on a shared folder.  
+I happened to see that the **System process** was doing larger reads than the application itself was asking for when I was running the same test, but with all files on my local drive.  
 The application was asking for about 4KB per read-request, but I saw that **System** always read atleast 128KB, which meant that only the first read-request took took about 1~9 milliseconds, and the following 124KB took only a fraction of a millisecond to complete.
 
 #### Network Storage
@@ -152,7 +152,7 @@ And the answer to that question is: **Fast I/O**
 More specifically, with **SMB v1** forced and **OpLocks** disabled, Windows will not cache anything locally so any read and writes had to go directly to the server for all operations.  
 We noticed that Gigabit-networks generally performed better, but when each read-request is somewhere between 1 to 16KB, what matters most isn't bandwidth but responsetime, and SMB is quite a chatty protocol so any delays in packets will make the performance drop.  
 On average, we were seeing a response time of 1 milliseconds per I/O-request, and if the application is asking for **4KB per request, the math equates to 4000 KiloBytes per second, i.e 4MBps.**  
-If **Fast I/O** had been allowed for these reads, we would have had a _theoretical top speed of up to 128MBps (128KB per millisecond) with that same responsetime._  
+If **Fast I/O** had been allowed for these reads, we would have had a _theoretical top speed of up to 128MBps (128KB per millisecond) with that same responsetime._   
 
 ## External services
 
