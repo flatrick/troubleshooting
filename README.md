@@ -135,21 +135,24 @@ While using **Process Monitor** (using **Enable Advanced Output**, which you sho
 Fast I/O read requests will cause the System-process to convert any read-request of less than 128KB into specifically 128KB; this is quite important to remember when you're trying to figure out performance issues with I/O-access that aren't on what Windows considers local storage.  
 
 As an example, around 2014, I was trying to figure out why database-reads were so incredibly slow when the dBase5-based database existed on a shared folder.  
-I happened to see that System was doing larger reads than the application itself was asking for when I was running the same test but with all files on my local drive.  
-The application was asking for about 4KB per read-request, but I saw that System always read atleast 128KB, which meant that only the first read-request took took about 1~9 milliseconds, and the following 124KB took only a fraction of a millisecond to complete.
+I happened to see that **System process** was doing larger reads than the application itself was asking for when I was running the same test but with all files on my local drive.  
+The application was asking for about 4KB per read-request, but I saw that **System** always read atleast 128KB, which meant that only the first read-request took took about 1~9 milliseconds, and the following 124KB took only a fraction of a millisecond to complete.
 
 #### Network Storage
 
-These days, with SMB v1 having serious security flaws no one wants to risk having in production, this is perhaps unneccessary to discuss, but as an example, I will describe things I've done because of issues that SMB v2 and later poses for files that multiple computers write to with very short intervals (possible multiple writes within a second).
+These days, with **SMB v1** having serious security flaws no one wants to risk having in production, this is perhaps not so relevant for most to discuss today, but as an example, I will describe things I've done because of issues that **SMB v2** and later poses for files that multiple computers write to with very short intervals (possible multiple writes within a second).  
 
-The problem we were seeing at multiple customer sites was file corruption, but we could never really with certainty explain why they occured or why some customers saw the issue more often than others. 
-What we did know was this; all versions of Windows Server after window Server 2003 would sooner or later cause file corruptions. Windows Small Business Server 2011 was especially horrible we'd later learn, but that's a, partially, different story. 
-We also knew, I'm not sure how we knew it at the time, but if we forced the customers to put the shared files on servers that were configured to only share files using SMB v1, and even better, with Opportunistic Locking (OpLocks) disabled, the issues almost always entirely dissappeared.
-But then we had the issue of horrible read-performance to those shares (write as well, but read was especially bad) which was causing major complaints from the customers.
+The problem we were seeing at multiple customer sites was file corruption, but we could never really with certainty explain why they occured or why some customers saw the issue more often than others.  
+What we did know was this; all versions of **Windows Server** after **Window Server 2003** would sooner or later cause file corruptions. **Windows Small Business Server 2011** was especially horrible we'd later learn, but that's a different story.  
+We did know that if we forced the customers to put the shared files on servers that were configured to only share files using SMB v1, and even better, with Opportunistic Locking (OpLocks) disabled, the issues almost always entirely dissappeared, but we weren't sure exactly why.
+But then we had the issue of horrible read-performance to those shares (write as well, but read was especially bad) which was causing major complaints from the customers since the application became so slow.  
 
-I went down a deep hole trying to figure out just how to squeeze out better performance, and also trying to understand in detail why the performance was so serverely hampered when we had the file-share configured in a manner that didn't cause corruptions.
-And the answer to that question is: Fast I/O
-More specifically, with SMB v1 forced and OpLocks disabled, Windows wouldn't cache anything locally so any read and writes had to go directly to the server. This 
+I went down a deep hole trying to figure out just how to squeeze out better performance, and also trying to understand in detail why the performance was so serverely hampered when we had the file-share configured in a manner that didn't cause corruptions.  
+And the answer to that question is: **Fast I/O**
+More specifically, with **SMB v1** forced and **OpLocks** disabled, Windows will not cache anything locally so any read and writes had to go directly to the server for all operations.  
+We noticed that Gigabit-networks generally performed better, but when each read-request is somewhere between 1 to 16KB, what matters most isn't bandwidth but responsetime, and SMB is quite a chatty protocol so any delays in packets will make the performance drop.  
+On average, we were seeing a response time of 1 milliseconds per I/O-request, and if the application is asking for **4KB per request, the math equates to 4000 KiloBytes per second, i.e 4MBps.**  
+If **Fast I/O** had been allowed for these reads, we would have had a _theoretical top speed of up to 128MBps (128KB per millisecond) with that same responsetime._  
 
 ## External services
 
