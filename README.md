@@ -136,7 +136,7 @@ While using **Process Monitor** (using **Enable Advanced Output**, which you sho
 
 As an example, around 2014, I was trying to figure out why database-reads were so incredibly slow when the **dBase5-based database** existed on a shared folder.  
 I happened to see that the **System process** was doing larger reads than the application itself was asking for when I was running the same test, but with all files on my local drive.  
-The application was asking for about 4KB per read-request, but I saw that **System** always read atleast 128KB, which meant that only the first read-request took took about 1~9 milliseconds, and the following 124KB took only a fraction of a millisecond to complete.
+The application was asking for about 4KB per read-request, but I saw that **System** always read atleast 128KB, which meant that only the first read-request took took about 1~9 milliseconds while the data was fetched from the storage device, and the following 124KB took only a fraction of a millisecond to complete as they were being read from RAM instead.
 
 #### Network Storage
 
