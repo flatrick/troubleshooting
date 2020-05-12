@@ -38,7 +38,7 @@ If/when you can reproduce the error on a separate computer of your own, you're m
 
 Here is a list of questions I try to find the answer for when I have an error I don't know the cause for:
 
-1. What application is being used? _Version, integrations used and other relevant details_
+1. What application is being used? _Version, integrations used, OS used and other potentionally relevant details_
 1. Where in the application is the user working?
 1. What has the user done up until the error occurred?
 1. What is the user attempting to do?
@@ -49,6 +49,8 @@ Here is a list of questions I try to find the answer for when I have an error I 
     1. Can the user reproduce the error on every/multiple logins?
 1. Can you reproduce the error in the same installation?
     1. Can you reproduce the error in a separate installation?
+    1. Can you reproduce the error in a different O/S?
+    1. Can you reproduce the error using different versions of dependencies? Such as different versions .Net Framework, Oracle JDK/JRE vs OpenJDK for example.
 
 ### Misbehaving application
 
